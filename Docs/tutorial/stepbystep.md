@@ -73,7 +73,10 @@ if you type esc and run it, the result will be the same, but you will not be ret
 only if you type esc you will interrupt the program !
 
 ![](s3result.png)
- 
+
+disk:
+[step3 cart](s3.lk12)
+
 ## step 4 : the _update() function and btn()
 
 you will most probably always run your game logic in the `_update()` function,
