@@ -291,6 +291,7 @@ you will need to update player collision a little bit so that we
 can test, add vertical movement
 
 the game should look like this :
+![](s7result.gif)
 
 
 
