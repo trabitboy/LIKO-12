@@ -236,9 +236,64 @@ this is the result you should have, starting to look like a game !!!!
 
 
 ## step 7 : bullet collision
-WWIP
+WIP
 To minimize typing, we will use "sphere collision":
-If the distance
+If the distance between the center of 2 objects is under a certain threshold, they touch.
+leap of faith:
+we will use pythagore theorem to calculate the square of the distance between the 2 centers .
+
+type in the following collision function
+```
+function rcoll88(x1,y1,x2,y2)
+ --squares are 8x8, 
+ -- and we use pythagore 
+ -- a*a=b*b+c*c
+ 
+ --we calculate the square of the
+ --distance betw the 2 centers
+ local b=math.abs(x1+4-(x2+4))
+ local c=math.abs(y1+4-(y2+4))
+ local d2=b*b+c*c
+ if d2<8*8 then
+  return true
+ end
+ return false
+end
+```
+INSERT ANIMGIF OF EDITOR
+
+augment the move bullets function to also check collision with ennemies,
+in which case ennemy is removed from the active list
+```
+function movebullets()
+ for i,b in ipairs(bullets)
+ do
+  b.x=b.x+1
+  if b.x>160 then
+   table.remove(bullets,i)
+  end
+  --for each bullet, check collision
+  --with ennemies
+  for j,e in ipairs(ennemies)
+  do
+   -- insert coll check
+   local ret=rcoll88(b.x,b.y,e.x,e.y)
+   if ret==true then
+    table.remove(ennemies,j)
+   end
+  end
+ end
+end
+```
+INSERT ANIMGIF OF EDITOR
+
+you will need to update player collision a little bit so that we 
+can test, add vertical movement
+
+the game should look like this :
+
+
+
 ## step 8: player colliding with ennemies
 
 ## step 9: victory condition, function pointers in _update() and _draw() !
