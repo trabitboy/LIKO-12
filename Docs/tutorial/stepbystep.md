@@ -236,6 +236,9 @@ this is the result you should have, starting to look like a game !!!!
 
 
 ## step 7 : bullet collision
+WWIP
+To minimize typing, we will use "sphere collision":
+If the distance
 ## step 8: player colliding with ennemies
 
 ## step 9: victory condition, function pointers in _update() and _draw() !
