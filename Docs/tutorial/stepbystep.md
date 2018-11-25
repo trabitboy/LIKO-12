@@ -236,7 +236,6 @@ this is the result you should have, starting to look like a game !!!!
 
 
 ## step 7 : bullet collision
-WIP
 To minimize typing, we will use "sphere collision":
 If the distance between the center of 2 objects is under a certain threshold, they touch.
 leap of faith:
@@ -285,7 +284,7 @@ function movebullets()
  end
 end
 ```
-INSERT ANIMGIF OF EDITOR
+![](s7moveennemies.gif)
 
 you will need to update player collision a little bit so that we 
 can test, add vertical movement
