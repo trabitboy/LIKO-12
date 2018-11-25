@@ -260,7 +260,7 @@ function rcoll88(x1,y1,x2,y2)
  return false
 end
 ```
-INSERT ANIMGIF OF EDITOR
+![](s7rcoll88.gif)
 
 augment the move bullets function to also check collision with ennemies,
 in which case ennemy is removed from the active list
