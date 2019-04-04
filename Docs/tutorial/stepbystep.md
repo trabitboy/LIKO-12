@@ -296,4 +296,34 @@ the game should look like this :
 
 ## step 8: player colliding with ennemies
 
+you can damage ennemies but you should be able to lose;
+create a function to check if player touches an ennemy.
+you can reuse the collision function without copying it!
+
+there is a new thing the interpreter needs to remember,
+let's declare it as a variable
+
+
+```
+alive=true
+```
+we need a function to check if the ply connects with any ennemy
+```
+function plycoll()
+ for i,e in ipairs(ennemies)
+ do
+   local ret=rcoll88(px,py,e.x,e.y)
+   if ret==true then
+    return true
+   end           
+ end
+ return false
+end
+```
+
+then depending if the ply hits an helicopter or not 
+
+
+
+
 ## step 9: victory condition, function pointers in _update() and _draw() !
